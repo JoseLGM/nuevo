@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoseLGM/nuevo/issues"
   },
-  "homepage": "https://github.com/JoseLGM/nuevo#readme"
+  "homepage": "https://github.com/JoseLGM/nuevo#readme",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
 }
