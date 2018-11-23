@@ -18,15 +18,25 @@ var connection = mysql.createConnection({
 
 
 connection.connect();
-connection.query('show tables',function(error,results,fields)
-{
-  if(error) throw error;
-  console.log(results);
+/*
+connection.query('SHOW TABLES', function (error, results, fields) {
+  if (error) throw error;
+  //console.log(results);
+  for (var i = 0; i < results.length; i++)
+  {
+    console.log("Tabla número " + (i + 1) + ": " +  results[i].Tables_in_classicmodels);
+  }
+});
+*/
 
-   for (var i=0;i<results.length;i++)
-   {
-      console.log("tabla numero"+(i+1))+
-      results[i].Tables_in_classicmodels);
-   }
-}
-connection.end;
+connection.query('SELECT * FROM customers', function (error, results, fields) {
+  if (error) throw error;
+  //console.log(results);
+  //console.log(results[0]);
+  for (var i = 0; i < results.length; i++)
+  {
+    //console.log("Registro ",(i + 1),": ",results[i]);
+    console.log("Nombre: ",results[i].customerName);
+  }
+});
+connection.end();
