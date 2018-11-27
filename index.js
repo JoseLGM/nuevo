@@ -40,3 +40,4 @@ connection.query('SELECT * FROM customers', function (error, results, fields) {
   }
 });
 connection.end();
+var Saludo="hola"
